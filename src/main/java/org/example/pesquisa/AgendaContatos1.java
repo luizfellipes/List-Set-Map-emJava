@@ -3,11 +3,11 @@ package org.example.pesquisa;
 import java.util.HashSet;
 import java.util.Set;
 
-public class AgendaContatos {
+public class AgendaContatos1 {
 
     private Set<Contato> contatoSet;
 
-    public AgendaContatos() {
+    public AgendaContatos1() {
         this.contatoSet = new HashSet<>();
     }
 

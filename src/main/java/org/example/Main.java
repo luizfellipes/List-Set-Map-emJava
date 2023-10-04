@@ -1,7 +1,8 @@
 package org.example;
 
 import org.example.Ordenacao.produtos.CadastroProdutos;
-import org.example.pesquisa.AgendaContatos;
+import org.example.map.AgendaContatos;
+import org.example.map.EstoqueProdutos;
 
 public class Main {
     public static void main(String[] args) {
@@ -55,7 +56,7 @@ public class Main {
         System.out.println("Contato atualizado: " + agendaContatos.atualizarNumeroContato("Luiz", 465456));*/
 
 
-        CadastroProdutos cadastroProdutos = new CadastroProdutos();
+       /* CadastroProdutos cadastroProdutos = new CadastroProdutos();
         cadastroProdutos.adicionarProduto(1L, "Produto 5", 15d, 5);
         cadastroProdutos.adicionarProduto(2L, "Produto 0", 20d, 10);
         cadastroProdutos.adicionarProduto(1L, "Produto 3", 10d, 2);
@@ -63,6 +64,33 @@ public class Main {
 
         System.out.println(cadastroProdutos.produtoSet);
         System.out.println(cadastroProdutos.exibirProdutosPorNome());
-        System.out.println(cadastroProdutos.exibirProdutosPorPreco());
+        System.out.println(cadastroProdutos.exibirProdutosPorPreco());*/
+
+       /* AgendaContatos agendaContatos = new AgendaContatos();
+        agendaContatos.adicionarContato("luiz", 123456);
+        agendaContatos.adicionarContato("Gislaine", 654321);
+        agendaContatos.adicionarContato("Laura", 123654);
+        agendaContatos.adicionarContato("Fellipe", 135246);
+        agendaContatos.exibirContatos();
+
+        agendaContatos.removerContatos("Fellipe");
+        agendaContatos.exibirContatos();
+
+
+        System.out.println("O Número é: " + agendaContatos.pesquisarPorNome("luiz"));*/
+
+        EstoqueProdutos estoque = new EstoqueProdutos();
+        estoque.exibirProdutos();
+
+        estoque.adicionarProduto(1L, "Produto A", 10, 5.0);
+        estoque.adicionarProduto(2L, "Produto B", 5, 10.0);
+        estoque.adicionarProduto(3L, "Produto C", 2, 15.0);
+
+        estoque.exibirProdutos();
+
+        System.out.println("Valor total do estoque: R$" + estoque.calcularValorTotalEstoque());
+        System.out.println("Produto mais barato: " + estoque.obterProdutoMaisBarato());
+        System.out.println("Produto mais caro: " + estoque.obterProdutoMaisCaro());
+
     }
 }
